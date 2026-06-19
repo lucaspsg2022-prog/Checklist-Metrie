@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist do Maître</title>
+<style>
+:root {
+--bg-color: #121212;
+--card-bg: #1e1e1e;
+--primary-color: #ffb74d; /* Tom âmbar/dourado elegante */
+--text-color: #e0e0e0;
+--text-muted: #a0a0a0;
+--border-color: #333333;
+--success-color: #4caf50;
+}
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+margin: 0;
+padding: 16px;
+display: flex;
+justify-content: center;
+}
+
+.container {
+width: 100%;
+max-width: 600px;
+}
+
+header {
+text-align: center;
+margin-bottom: 24px;
+background-color: var(--card-bg);
+border: 1px solid var(--border-color);
+color: white;
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+margin: 0;
+font-size: 22px;
+color: var(--primary-color);
+}
+
+header p {
+margin: 5px 0 0 0;
+color: var(--text-muted);
+font-size: 14px;
+}
+
+.section-card {
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: 12px;
+padding: 16px;
+margin-bottom: 16px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.section-title {
+font-size: 16px;
+font-weight: bold;
+color: var(--primary-color);
+margin-top: 0;
+margin-bottom: 16px;
+border-bottom: 1px solid var(--border-color);
+padding-bottom: 8px;
+}
+
+.checkbox-group {
+display: flex;
+align-items: flex-start;
+margin-bottom: 14px;
+cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+margin-right: 12px;
+transform: scale(1.2);
+margin-top: 3px;
+cursor: pointer;
+accent-color: var(--primary-color);
+}
+
+.checkbox-group label {
+font-size: 15px;
+line-height: 1.4;
+cursor: pointer;
+color: var(--text-color);
+}
+
+textarea {
+width: 100%;
+padding: 12px;
+background-color: #262626;
+border: 1px solid var(--border-color);
+border-radius: 6px;
+box-sizing: border-box;
+font-size: 15px;
+color: var(--text-color);
+resize: vertical;
+}
+
+textarea:focus {
+outline: none;
+border-color: var(--primary-color);
+}
+
+.btn-enviar {
+background-color: var(--success-color);
+color: white;
+border: none;
+width: 100%;
+padding: 16px;
+font-size: 16px;
+font-weight: bold;
+border-radius: 8px;
+cursor: pointer;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+transition: background 0.2s;
+margin-bottom: 40px;
+}
+
+.btn-enviar:hover {
+background-color: #388e3c;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>Checklist do Maître</h1>
+<p>Café Sucré & Quinta da Colina</p>
+</header>
+
+<form id="checklistForm">
+<div class="section-card">
+<div class="section-title">1. ANTES DA ABERTURA - Equipe</div>
+<div class="checkbox-group"><input type="checkbox" id="eq1"><label for="eq1">Conferir escala completa (faltas/atrasos)</label></div>
+<div class="checkbox-group"><input type="checkbox" id="eq2"><label for="eq2">Briefing com equipe (metas do dia, reservas, eventos)</label></div>
+<div class="checkbox-group"><input type="checkbox" id="eq3"><label for="eq3">Alinhar padrão de atendimento e postura</label></div>
+<div class="checkbox-group"><input type="checkbox" id="eq4"><label for="eq4">Delegar praças e responsabilidades</label></div>
+<div class="checkbox-group"><input type="checkbox" id="eq5"><label for="eq5">Conferir uniforme e apresentação pessoal</label></div>
+</div>
+
+<div class="section-card">
+<div class="section-title">1. ANTES DA ABERTURA - Salão</div>
+<div class="checkbox-group"><input type="checkbox" id="sl1"><label for="sl1">Limpeza geral impecável (mesas, cadeiras, chão)</label></div>
+<div class="checkbox-group"><input type="checkbox" id="sl2"><label for="sl2">Mesas alinhadas e bem montadas</label></div>
+<div class="checkbox-group"><input type="checkbox" id="sl3"><label for="sl3">Louças, talheres e taças polidos</label></div>
+<div class="checkbox-group"><input type="checkbox" id="sl4"><label for="sl4">Checar iluminação e climatização</label></div>
+<div class="checkbox-group"><input type="checkbox" id="sl5"><label for="sl5">Música ambiente adequada</label></div>
+<div class="checkbox-group"><input type="checkbox" id="sl6"><label for="sl6">Cardápios limpos e atualizados</label></div>
+</div>
+
+<div class="section-card">
+<div class="section-title">1. ANTES DA ABERTURA - Operação</div>
+<div class="checkbox-group"><input type="checkbox" id="op1"><label for="op1">Conferir reservas do dia</label></div>
+<div class="checkbox-group"><input type="checkbox" id="op2"><label for="op2">Identificar clientes VIP / aniversariantes</label></div>
+<div class="checkbox-group"><input type="checkbox" id="op3"><label for="op3">Alinhar com cozinha (Pratos indisponíveis / Tempo de preparo)</label></div>
+<div class="checkbox-group"><input type="checkbox" id="op4"><label for="op4">Verificar sistema (comandas, POS)</label></div>
+</div>
+
+<div class="section-card">
+<div class="section-title">4. APÓS O SERVIÇO - Fechamento</div>
+<div class="checkbox-group"><input type="checkbox" id="pos1"><label for="pos1">Conferir limpeza e organização do salão</label></div>
+<div class="checkbox-group"><input type="checkbox" id="pos2"><label for="pos2">Verificar mise en place para o próximo turno</label></div>
+<div class="checkbox-group"><input type="checkbox" id="pos3"><label for="pos3">Garantir armazenamento correto de itens</label></div>
+<div class="checkbox-group"><input type="checkbox" id="pos4"><label for="pos4">Reportar ocorrências do dia à coordenação administrativa</label></div>
+<div class="checkbox-group"><input type="checkbox" id="pos5"><label for="pos5">Feedback individual para equipe (se necessário)</label></div>
+<div class="checkbox-group"><input type="checkbox" id="pos6"><label for="pos6">Sinalizar melhorias operacionais</label></div>
+<div class="checkbox-group"><input type="checkbox" id="pos7"><label for="pos7">Conferir caixa junto ao responsável (se aplicável)</label></div>
+</div>
+
+<div class="section-card">
+<div class="section-title">Observações Gerais</div>
+<textarea id="observacoes" rows="4" placeholder="Insira notas sobre faltas, ocorrências ou manutenções do turno..."></textarea>
+</div>
+
+<button type="button" class="btn-enviar" onclick="enviarParaWhatsApp()">ENVIAR RELATÓRIO AO GERENTE</button>
+</form>
+</div>
+
+<script>
+function enviarParaWhatsApp() {
+const numeroGerente = "5583999301871";
+
+let texto = "📋 *RELATÓRIO DIÁRIO DO MAÎTRE*\n";
+texto += "*Café Sucré & Quinta da Colina*\n\n";
+
+const cards = document.querySelectorAll('.section-card');
+
+cards.forEach(card => {
+const tituloSecao = card.querySelector('.section-title').innerText;
+texto += `*${tituloSecao}*\n`;
+
+// Processa apenas os checkboxes visíveis na tela
+const checkboxes = card.querySelectorAll('.checkbox-group');
+checkboxes.forEach(group => {
+const checkbox = group.querySelector('input');
+const label = group.querySelector('label').innerText;
+const status = checkbox.checked ? "✅" : "❌";
+texto += `${status} ${label}\n`;
+});
+
+// Processa a caixa de observação
+const txtArea = card.querySelector('textarea');
+if (txtArea && txtArea.value.trim() !== "") {
+texto += `\n*Notas do Turno:* ${txtArea.value}\n`;
+}
+
+texto += "\n";
+});
+
+const url = `https://wa.me/${numeroGerente}?text=${encodeURIComponent(texto)}`;
+window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
